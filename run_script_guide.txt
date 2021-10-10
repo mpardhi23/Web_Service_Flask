@@ -1,0 +1,28 @@
+This guide file explains about the execution steps of Flask API
+
+This utility is developed on unix platform, so unix platform is mandatory.
+
+There are two scripts : manage_task.py and task_mamager.sh
+
+manage_task.py : python script which providing CRUD operation
+task_manager.sh : bash script inetracting with API written in manage_task.py
+
+Befor running task_manager.sh need to run below commands to run the server
+  1. export FLASK_APP=manage_task.py
+  2. python -m flask run
+
+./task_manager.sh -h
+#########################################################################
+This script interacts with the manage task API
+
+Syntax: ./task_manager.sh [-m|h]
+Example : ./task_manager.sh -m GET
+options:
+m     HTTP method name[GET|POST|PUT|DELETE]
+h     Print this Help.
+
+Pre-requisites :
+This microservice is created on Flask framework.
+Flask should be installed. Task data should be given in
+'config/task_data.conf' file. Example : title='Define server Configuration'
+#########################################################################
